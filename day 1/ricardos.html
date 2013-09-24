@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+		div {
+		   width:100px;
+		   height:100px;
+		   float:left;
+		   margin:10px;
+		   font-family:consolas;
+		   padding:10px;
+		}
+
+		#lucy {
+		   background-color:orange;
+		}
+
+		#ricky {
+		   background-color:grey;
+		}
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<div id='lucy' class='ricardo'>Lucy Ricardo</div>
+	<div id='ricky' class='ricardo'>Ricky Ricardo</div>
+	 
+	<script>
+		// give the lucy div a 3px solid red border
+		// $('#lucy').css('border', '3px solid red');
+
+		// turn the body of the page yellow
+		$('body').css('background-color', 'yellow');
+
+		// turn all of the divs on the page green
+		$('div').css('background-color', 'green');
+
+		// goodbye, divs.  make them all disappear
+		$('div').css('display', 'none');
+	</script>
+</body>
+</html>
