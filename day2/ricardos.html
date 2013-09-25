@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+		div {
+		   width:100px;
+		   height:100px;
+		   float:left;
+		   margin:10px;
+		   font-family:consolas;
+		   padding:10px;
+		}
+
+		#lucy {
+		   background-color:orange;
+		   cursor:pointer;
+		}
+
+		#ricky {
+		   background-color:grey;
+		   cursor: pointer;
+		}
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<div id='lucy' class='ricardo'>Lucy Ricardo</div>
+	<div id='ricky' class='ricardo'>Ricky Ricardo</div>
+	 
+	<script>
+		// give lucy a blue border when clicked
+		$('#lucy').click(function() {
+			$('#lucy').css('border', '3px solid blue');
+		});
+
+		// make lucy's opacity 50% when hovered
+		$('#lucy').hover(
+		function(){
+			$('#lucy').css('opacity', '0.5');
+		});
+
+		// when either lucy or ricky are clicked, change the height of lucy to 300px
+		$('.ricardo').click(function() {
+			$('#lucy').css('height', '300px');
+		});
+
+		// when lucy or ricky are clicked, make them disappear
+		$('.ricardo').click(function() {
+			$('.ricardo').css('display', 'none');
+		});
+
+	</script>
+</body>
+</html>
