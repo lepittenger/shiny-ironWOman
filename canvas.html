@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Canvas: Part 1</title>
+</head>
+<body>
+	<canvas width="500" id="myCanvas" height="300"></canvas>
+
+	<canvas width="500" id="myOtherCanvas" height="300"></canvas>
+
+	<script>
+		var canvas=document.getElementById('myCanvas'),
+		ctx = canvas.getContext('2d');
+
+		/* 50 pixels from the left, 50 down, 100 wide, 100 tall */
+		/* ctx.fillRect(50,50,100,100); */
+
+		/* rectangle with a stroke at 50 from left, 50 down & measuring 100x100px. Stroke on rectangle instead of fill */
+		/* ctx.strokeRect(50,50,100,100); */
+
+		ctx.fillStyle = 'red';
+		ctx.strokeStyle = 'black';
+		ctx.lineWidth=20;
+
+		ctx.beginPath();
+		ctx.moveTo(50,50);
+		ctx.lineTo(50,250);
+		ctx.lineTo(250,250);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+
+		var canvas=document.getElementById('myOtherCanvas'),
+		ctx = canvas.getContext('2d');
+
+		ctx.fillStyle = 'black';
+		ctx.strokeStyle = 'red';
+		ctx.lineWidth=20;
+
+		ctx.beginPath();
+		ctx.moveTo(50,50);
+		ctx.lineTo(250,50);
+		ctx.lineTo(250,250);
+		ctx.closePath();
+		ctx.fill();
+		ctx.stroke();
+
+	</script>
+</body>
+</html>
